@@ -2,6 +2,7 @@
 %h3 Place
 %strong.name
   = @place.name
+  %span{ style: 'font-size: small' }= "(#{@place.user.email})"
 .description
   = @place.description
 
@@ -9,6 +10,7 @@
 - @encounters.each do |encounter|
   %strong.name
     = encounter.name
+    %span{ style: 'font-size: small' }= "(#{encounter.user.email})"
   .description
     = encounter.description
 
