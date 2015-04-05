@@ -4,7 +4,7 @@ class EncountersController < ApplicationController
   # GET /encounters
   # GET /encounters.json
   def index
-    @encounters = Encounter.all
+    @encounters = Encounter.where(user: current_user)
   end
 
   # GET /encounters/1
