@@ -8,10 +8,11 @@ class GamesController < ApplicationController
     draw = Draw.new(game_params[:risk]).call
     @place = draw[:place]
     @encounters = draw[:encounters]
+    @risk = game_params[:risk]
   end
 
   def reward
-
+    @rewards = DrawReward.new(params[:risk]).call
   end
 
   private

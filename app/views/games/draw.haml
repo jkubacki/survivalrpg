@@ -12,3 +12,7 @@
   .description
     = encounter.description
 
+.reward-actions{ style: 'margin-top: 20px;' }
+  = link_to 'Reward', games_reward_path(risk: @risk), class: 'btn btn-success'
+  = link_to 'No reward', games_new_path, class: 'btn btn-danger'
+

@@ -1,0 +1,11 @@
+- if @rewards.count == 0
+  No rewards, you fool
+- @rewards.each do |reward|
+  %p
+    = reward.type.titleize
+    x
+    = reward.points
+
+.actions
+  = link_to 'Next round', games_new_path, class: 'btn btn-default'
+

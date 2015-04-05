@@ -1,7 +1,7 @@
 class DrawReward
 
   def initialize(risk)
-    @risk = risk
+    @risk = risk.to_i
   end
 
   def call
@@ -23,7 +23,7 @@ class DrawReward
   end
 
   def draw_type
-    %w(food food food water water water medicaments weapons vehicle building).sample
+    %w(food food food food food water water water water water medicaments weapons vehicle building).sample
   end
 
   def draw_points
