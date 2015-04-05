@@ -25,7 +25,7 @@ class EncountersController < ApplicationController
   # POST /encounters.json
   def create
     @encounter = Encounter.new(encounter_params)
-
+    @encounter.user = current_user
     respond_to do |format|
       if @encounter.save
         format.html { redirect_to @encounter, notice: 'Encounter was successfully created.' }
