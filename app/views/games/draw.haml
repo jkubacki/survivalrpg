@@ -1,0 +1,14 @@
+
+%h3 Place
+%strong.name
+  = @place.name
+.description
+  = @place.description
+
+%h3 Encounters
+- @encounters.each do |encounter|
+  %strong.name
+    = encounter.name
+  .description
+    = encounter.description
+

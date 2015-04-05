@@ -1,7 +1,7 @@
 class Draw
 
   def initialize(risk)
-    @risk = risk
+    @risk = risk.to_i
   end
 
   def call
