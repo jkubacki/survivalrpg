@@ -18,6 +18,8 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'haml-rails'
 gem 'pundit'
 gem 'simple_form'
+gem 'draper'
+gem 'decent_exposure'
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'

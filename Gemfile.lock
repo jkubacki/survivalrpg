@@ -78,6 +78,7 @@ GEM
     columnize (0.9.0)
     database_cleaner (1.4.1)
     debug_inspector (0.0.2)
+    decent_exposure (2.3.2)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -86,6 +87,11 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     erubis (2.7.0)
     execjs (2.4.0)
     factory_girl (4.5.0)
@@ -227,6 +233,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    request_store (1.1.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rspec (3.2.0)
@@ -324,7 +331,9 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.1.0)
   database_cleaner
+  decent_exposure
   devise
+  draper
   factory_girl_rails
   faker
   figaro (>= 1.0.0.rc1)

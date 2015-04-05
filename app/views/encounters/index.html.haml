@@ -1,0 +1,25 @@
+%h1 Listing encounters
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Frequency
+      %th
+      %th
+      %th
+
+  %tbody
+    - @encounters.each do |encounter|
+      %tr
+        %td= encounter.name
+        %td= encounter.description
+        %td= encounter.frequency
+        %td= link_to 'Show', encounter
+        %td= link_to 'Edit', edit_encounter_path(encounter)
+        %td= link_to 'Destroy', encounter, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Encounter', new_encounter_path

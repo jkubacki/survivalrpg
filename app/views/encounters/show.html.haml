@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @encounter.name
+%p
+  %b Description:
+  = @encounter.description
+%p
+  %b Frequency:
+  = @encounter.frequency
+
+= link_to 'Edit', edit_encounter_path(@encounter)
+\|
+= link_to 'Back', encounters_path
