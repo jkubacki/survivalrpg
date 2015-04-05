@@ -14,8 +14,14 @@ class Draw
   private
 
   def draw_place
-    id = Place.pluck(:id).sample
-    Place.find(id)
+    points = Place.sum(:frequency)
+    random_point = rand(1..points)
+
+    current_point = 0
+    Place.all.each do |place|
+      current_point += place.frequency
+      return place if random_point <= current_point
+    end
   end
 
   def draw_encounters(risk)
